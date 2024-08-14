@@ -1,0 +1,118 @@
+/* 
+Parametros
+
+- Mobile: 375px
+- Desktop: 1440px
+
+font
+
+- Family: [Outfit](https://fonts.google.com/specimen/Outfit)
+- Weights: 400, 700
+
+- Font size (paragraph): 15px
+
+Colores
+
+- White: hsl(0, 0%, 100%)
+
+- Slate 300: hsl(212, 45%, 89%)
+- Slate 500: hsl(216, 15%, 48%)
+- Slate 900: hsl(218, 44%, 22%)
+
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root{
+
+--White: hsl(0, 0%, 100%);
+--Color-primary1: hsl(212, 45%, 89%);
+--Color-primary2: hsl(216, 15%, 48%);
+--Color-primary3: hsl(218, 44%, 22%);
+
+--light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+--dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+--Black: #222;
+}
+
+/* Estilos generales */
+html {
+    background-color: var(--Color-primary1);
+    display: grid;
+    place-items: center;
+    height: 100vh; 
+    margin: 0; 
+}
+
+#card-container {
+    height: auto;
+    width: 90%; 
+    max-width: 400px; 
+    background-color: var(--White);
+    display: grid;
+    justify-content: center;
+    border-radius: 5%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    padding: 1rem; 
+}
+
+.qr-image {
+    border-radius: 7%;
+    padding: 1rem;
+    width: 100%; 
+    max-width: 350px; 
+}
+
+h1 {
+    font-weight: 700;
+    text-align: center;
+    font-family: "Outfit", sans-serif;
+    font-size: 2rem; 
+}
+
+p {
+    font-size: 1rem; 
+    font-weight: 400;
+    text-align: center;
+    font-family: "Outfit", sans-serif;
+    opacity: 0.5;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+
+@media (max-width: 960px) {
+    h1 {
+        font-size: 1.5rem; 
+    }
+
+    p {
+        font-size: 0.875rem; 
+        margin-bottom: 20px; 
+    }
+
+    #card-container {
+        width: 95%; 
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.25rem; 
+    }
+
+    p {
+        font-size: 0.75rem; 
+        margin-bottom: 10px; 
+    }
+
+    #card-container {
+        width: 100%; 
+        padding: 0.5rem; 
+    }
+
+    .qr-image {
+        max-width: 300px; 
+    }
+}
